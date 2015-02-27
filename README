@@ -1,0 +1,4 @@
+Apache Maven 3.0.4
+
+$ mvn archetype:generate -DgroupId=number.printer -DartifactId=convert-number-to-words-or-roman-numerals -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
