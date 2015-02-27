@@ -2,3 +2,29 @@ Apache Maven 3.0.4
 
 $ mvn archetype:generate -DgroupId=number.printer -DartifactId=convert-number-to-words-or-roman-numerals -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
 
+Project goal:
+    for numbers (Arabic numerals) in the range 1 - 3999
+        convert number to word(s)
+        conver number to Roman numerals
+
+Words example:
+1 = one
+21 = twenty one
+105 = one hundred and five
+56945781 = fifty six million nine hundred and forty five thousand seven hundred and eighty one
+
+Roman example:
+    To shorten the number of symbols used to represent a number the placement of a numeral within a number can sometimes indicate subtraction rather than addition.
+    For example rather than writing 4 as IIII they would instead write IV (5 minus 1). Note that such subtraction is only valid for the following cases:
+    I can be placed before V and X to make 4 units (IV) and 9 units (IX) respectively
+    X can be placed before L and C to make 40 (XL) and 90 (XC) respectively
+    C can be placed before D and M to make 400 (CD) and 900 (CM) respectively
+    So, for example, representing 999 as IM is not valid.
+
+Examples:
+9 = IX
+555 = DLV
+999 = CMXCIX
+1974 = MCMLXXIV
+2999 = MMCMXCIX
+
