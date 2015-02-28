@@ -52,6 +52,10 @@ public class NumberToWord {
             out = get99Part(numberStr, out, "");
             out = Character.toUpperCase(out.trim().charAt(0)) + out.trim().substring(1);
 
+        } else if (numberStr.length() == 1) {
+
+            out = Character.toUpperCase(until20[number].trim().charAt(0)) + until20[number].trim().substring(1);
+
         }
 
         return out;

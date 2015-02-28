@@ -40,6 +40,31 @@ public class NumberToWordTest {
     }
 
     @Test
+    public void length1Test() throws Exception {
+
+        logger.info("%%%%%%%%%% length1Test %%%%%%%%%");
+
+        String word = NumberToWord.convertNumberToWord(1);
+        String expected = "One";
+        logger.info("===== word -" + word + "-");
+        logger.info("===== expected -" + expected + "-");
+        assertTrue(word.equals(expected));
+
+        word = NumberToWord.convertNumberToWord(5);
+        expected = "Five";
+        logger.info("===== word -" + word + "-");
+        logger.info("===== expected -" + expected + "-");
+        assertTrue(word.equals(expected));
+
+        word = NumberToWord.convertNumberToWord(9);
+        expected = "Nine";
+        logger.info("===== word -" + word + "-");
+        logger.info("===== expected -" + expected + "-");
+        assertTrue(word.equals(expected));
+
+    }
+
+    @Test
     public void length2Test() throws Exception {
 
         logger.info("%%%%%%%%%% length2Test %%%%%%%%%");
