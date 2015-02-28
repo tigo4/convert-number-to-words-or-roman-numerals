@@ -33,3 +33,6 @@ Solution:
     Use the basic programming strategy which is space allocation. Like in memory operations the space occupied by the data has to be correcly handled. The same concept is used in arrays - arrays have a defined length.
     The solution is to process the input number according to it's size in bytes. Range 1 - 3999 can have 4, 3, 2 and 1 byte(s).
 
+Compile and run the tests (maven):
+$ mvn clean test
+
