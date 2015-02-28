@@ -37,4 +37,7 @@ Compile and run the tests (maven):
 $ mvn clean test
 $ mvn clean test -Dtest=NumberPrinterTest -DconvertionMode=WORDS -DnumberToConvert=999
 $ mvn clean test -Dtest=NumberPrinterTest -DconvertionMode=ROMAN -DnumberToConvert=999
+or run script
+$ ./NumberPrinterTest.sh WORDS 999
+$ ./NumberPrinterTest.sh ROMAN 999
 
