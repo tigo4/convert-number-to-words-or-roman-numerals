@@ -17,16 +17,6 @@ public class NumberToRomanNumeral {
     private static final String[] hundred = { "", "C", "CC", "CCC", 
         "CD", "D", "DC", "DCC", "DCCC", "CM" };
 
-    /*
-    private static final String[] until20 = { "", " one", " two", " three",
-            " four", " five", " six", " seven", " eight", " nine", " ten",
-            " eleven", " twelve", " thirteen", " fourteen", " fifteen",
-            " sixteen", " seventeen", " eighteen", " nineteen" };
-
-    private static final String[] wordsx10 = { "", " ten", " twenty",
-            " thirty", " forty", " fifty", " sixty", " seventy", " eighty",            " ninety" };
-    */
-
     public static String convertNumberToRomanNumeral(int number) throws Exception {
 
         logger.info("number: " + number);
@@ -63,14 +53,11 @@ public class NumberToRomanNumeral {
             out = get99Part(numberStr, out);
             out = Character.toUpperCase(out.trim().charAt(0)) + out.trim().substring(1);
 
-        }
-        /*
         } else if (numberStr.length() == 1) {
 
             out = Character.toUpperCase(until20[number].trim().charAt(0)) + until20[number].trim().substring(1);
 
         }
-        */
 
         return out;
 

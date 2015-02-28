@@ -39,32 +39,30 @@ public class NumberToRomanNumeralTest {
             
     }
 
-    /*
     @Test
     public void length1Test() throws Exception {
 
         logger.info("%%%%%%%%%% length1Test %%%%%%%%%");
 
         String word = NumberToRomanNumeral.convertNumberToRomanNumeral(1);
-        String expected = "One";
+        String expected = "I";
         logger.info("===== word -" + word + "-");
         logger.info("===== expected -" + expected + "-");
         assertTrue(word.equals(expected));
 
         word = NumberToRomanNumeral.convertNumberToRomanNumeral(5);
-        expected = "Five";
+        expected = "V";
         logger.info("===== word -" + word + "-");
         logger.info("===== expected -" + expected + "-");
         assertTrue(word.equals(expected));
 
         word = NumberToRomanNumeral.convertNumberToRomanNumeral(9);
-        expected = "Nine";
+        expected = "IX";
         logger.info("===== word -" + word + "-");
         logger.info("===== expected -" + expected + "-");
         assertTrue(word.equals(expected));
 
     }
-    */
 
     @Test
     public void length2Test() throws Exception {
