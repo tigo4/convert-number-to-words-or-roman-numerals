@@ -38,8 +38,74 @@ public class NumberToWordTest {
     }
 
     @Test
-    public void numberToWordTest() {
-        assertTrue(true);
+    public void length4Test() throws Exception {
+
+        String word = NumberToWord.convertNumberToWord(1000);
+        String expected = "One thousand";
+        logger.info("===== word -" + word + "-");
+        logger.info("===== expected -" + expected + "-");
+        assertTrue(word.equals(expected));
+
+        word = NumberToWord.convertNumberToWord(1001);
+        expected = "One thousand and one";
+        logger.info("===== word -" + word + "-");
+        logger.info("===== expected -" + expected + "-");
+        assertTrue(word.equals(expected));
+
+        word = NumberToWord.convertNumberToWord(1011);
+        expected = "One thousand and eleven";
+        logger.info("===== word -" + word + "-");
+        logger.info("===== expected -" + expected + "-");
+        assertTrue(word.equals(expected));
+
+        word = NumberToWord.convertNumberToWord(1010);
+        expected = "One thousand and ten";
+        logger.info("===== word -" + word + "-");
+        logger.info("===== expected -" + expected + "-");
+        assertTrue(word.equals(expected));
+
+        word = NumberToWord.convertNumberToWord(1009);
+        expected = "One thousand and nine";
+        logger.info("===== word -" + word + "-");
+        logger.info("===== expected -" + expected + "-");
+        assertTrue(word.equals(expected));
+
+        word = NumberToWord.convertNumberToWord(1090);
+        expected = "One thousand and ninety";
+        logger.info("===== word -" + word + "-");
+        logger.info("===== expected -" + expected + "-");
+        assertTrue(word.equals(expected));
+
+        word = NumberToWord.convertNumberToWord(1100);
+        expected = "One thousand and one hundred";
+        logger.info("===== word -" + word + "-");
+        logger.info("===== expected -" + expected + "-");
+        assertTrue(word.equals(expected));
+
+        word = NumberToWord.convertNumberToWord(1101);
+        expected = "One thousand and one hundred and one";
+        logger.info("===== word -" + word + "-");
+        logger.info("===== expected -" + expected + "-");
+        assertTrue(word.equals(expected));
+
+        word = NumberToWord.convertNumberToWord(1110);
+        expected = "One thousand and one hundred and ten";
+        logger.info("===== word -" + word + "-");
+        logger.info("===== expected -" + expected + "-");
+        assertTrue(word.equals(expected));
+
+        word = NumberToWord.convertNumberToWord(1111);
+        expected = "One thousand and one hundred and eleven";
+        logger.info("===== word -" + word + "-");
+        logger.info("===== expected -" + expected + "-");
+        assertTrue(word.equals(expected));
+
+        word = NumberToWord.convertNumberToWord(2345);
+        expected = "Two thousand and three hundred and forty five";
+        logger.info("===== word -" + word + "-");
+        logger.info("===== expected -" + expected + "-");
+        assertTrue(word.equals(expected));
+
     }
 
 }
