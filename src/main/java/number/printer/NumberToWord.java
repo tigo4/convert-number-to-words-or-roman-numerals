@@ -38,14 +38,19 @@ public class NumberToWord {
             String a = until20[Integer.parseInt(""+numberStr.charAt(1))];
             out += a.equals("") ? a : " and" + a + " hundred";
 
-            out = get99Part(numberStr, out);
+            out = get99Part(numberStr, out, " and");
 
         } else if (numberStr.length() == 3) {
 
             String a = until20[Integer.parseInt(""+numberStr.charAt(0))];
             out += Character.toUpperCase(a.trim().charAt(0)) + a.trim().substring(1) + " hundred";
 
-            out = get99Part(numberStr, out);
+            out = get99Part(numberStr, out, " and");
+
+        } else if (numberStr.length() == 2) {
+
+            out = get99Part(numberStr, out, "");
+            out = Character.toUpperCase(out.trim().charAt(0)) + out.trim().substring(1);
 
         }
 
@@ -53,19 +58,19 @@ public class NumberToWord {
 
     }
 
-    private static String get99Part(String numberStr, String out) {
+    private static String get99Part(String numberStr, String out, String andWord) {
 
         int startPos = numberStr.length() - 2;
         int endPos = startPos + 1;
 
         if (Integer.parseInt(""+numberStr.charAt(startPos))>1) {
             String b = wordsx10[Integer.parseInt(""+numberStr.charAt(startPos))];
-            out += b.equals("") ? b : " and" + b;
+            out += b.equals("") ? b : andWord + b;
             String b1 = until20[Integer.parseInt(""+numberStr.charAt(endPos))];
             out += b1;
         } else {
             String c = until20[Integer.parseInt(""+numberStr.charAt(startPos)+numberStr.charAt(endPos))];
-            out += c.equals("") ? c : " and" + c;
+            out += c.equals("") ? c : andWord + c;
         }
 
         return out;
