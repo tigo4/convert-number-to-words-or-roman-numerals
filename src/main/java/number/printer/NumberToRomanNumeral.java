@@ -8,9 +8,11 @@ public class NumberToRomanNumeral {
 
     private static final Logger logger = LogManager.getLogger("NumberToRomanNumeral");
 
-    private static final String[] digit = { "", "I","II",
-        "III","IV", "V","VI","VII","VIII","IX" };
-    private static final String[] ten = { "", "X","XX","XXX",
+    private static final String[] until20 = { "", "I","II",
+        "III","IV", "V","VI","VII","VIII","IX",  
+        "X", "XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII",
+        "XVIII", "XIX"};
+    private static final String[] wordsx10 = { "", "X","XX","XXX",
         "XL","L","LX","LXX", "LXXX","XC" };
     private static final String[] hundred = { "", "C", "CC", "CCC", 
         "CD", "D", "DC", "DCC", "DCCC", "CM" };
@@ -56,13 +58,13 @@ public class NumberToRomanNumeral {
 
             out = get99Part(numberStr, out);
 
-        }
-        /*
         } else if (numberStr.length() == 2) {
 
-            out = get99Part(numberStr, out, "");
+            out = get99Part(numberStr, out);
             out = Character.toUpperCase(out.trim().charAt(0)) + out.trim().substring(1);
 
+        }
+        /*
         } else if (numberStr.length() == 1) {
 
             out = Character.toUpperCase(until20[number].trim().charAt(0)) + until20[number].trim().substring(1);
@@ -80,12 +82,12 @@ public class NumberToRomanNumeral {
         int endPos = startPos + 1;
 
         if (Integer.parseInt(""+numberStr.charAt(startPos))>1) {
-            String b = ten[Integer.parseInt(""+numberStr.charAt(startPos))];
+            String b = wordsx10[Integer.parseInt(""+numberStr.charAt(startPos))];
             out += b.equals("") ? b : b;
-            String b1 = digit[Integer.parseInt(""+numberStr.charAt(endPos))];
+            String b1 = until20[Integer.parseInt(""+numberStr.charAt(endPos))];
             out += b1;
         } else {
-            String c = digit[Integer.parseInt(""+numberStr.charAt(startPos)+numberStr.charAt(endPos))];
+            String c = until20[Integer.parseInt(""+numberStr.charAt(startPos)+numberStr.charAt(endPos))];
             out += c.equals("") ? c : c;
         }
 

@@ -64,6 +64,7 @@ public class NumberToRomanNumeralTest {
         assertTrue(word.equals(expected));
 
     }
+    */
 
     @Test
     public void length2Test() throws Exception {
@@ -71,31 +72,24 @@ public class NumberToRomanNumeralTest {
         logger.info("%%%%%%%%%% length2Test %%%%%%%%%");
 
         String word = NumberToRomanNumeral.convertNumberToRomanNumeral(10);
-        String expected = "Ten";
+        String expected = "X";
         logger.info("===== word -" + word + "-");
         logger.info("===== expected -" + expected + "-");
         assertTrue(word.equals(expected));
 
-        word = NumberToRomanNumeral.convertNumberToRomanNumeral(11);
-        expected = "Eleven";
+        word = NumberToRomanNumeral.convertNumberToRomanNumeral(50);
+        expected = "L";
         logger.info("===== word -" + word + "-");
         logger.info("===== expected -" + expected + "-");
         assertTrue(word.equals(expected));
 
-        word = NumberToRomanNumeral.convertNumberToRomanNumeral(99);
-        expected = "Ninety nine";
-        logger.info("===== word -" + word + "-");
-        logger.info("===== expected -" + expected + "-");
-        assertTrue(word.equals(expected));
-
-        word = NumberToRomanNumeral.convertNumberToRomanNumeral(25);
-        expected = "Twenty five";
+        word = NumberToRomanNumeral.convertNumberToRomanNumeral(54);
+        expected = "LIV";
         logger.info("===== word -" + word + "-");
         logger.info("===== expected -" + expected + "-");
         assertTrue(word.equals(expected));
 
     }
-    */
 
     @Test
     public void length3Test() throws Exception {
