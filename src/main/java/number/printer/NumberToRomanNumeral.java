@@ -54,7 +54,7 @@ public class NumberToRomanNumeral {
 
         } else if (numberStr.length() == 1) {
 
-            out = until20[number].charAt(0) + until20[number].substring(1);
+            out = until20[number];
 
         }
 
