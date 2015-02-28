@@ -15,6 +15,8 @@ public class NumberToWordTest {
     @Test
     public void rangeTest() throws Exception {
 
+        logger.info("%%%%%%%%%% rangeTest %%%%%%%%%");
+
         boolean result1 = false;
         boolean result2 = false;
 
@@ -38,7 +40,52 @@ public class NumberToWordTest {
     }
 
     @Test
+    public void length3Test() throws Exception {
+
+        logger.info("%%%%%%%%%% length3Test %%%%%%%%%");
+
+        String word = NumberToWord.convertNumberToWord(100);
+        String expected = "One hundred";
+        logger.info("===== word -" + word + "-");
+        logger.info("===== expected -" + expected + "-");
+        assertTrue(word.equals(expected));
+
+        word = NumberToWord.convertNumberToWord(101);
+        expected = "One hundred and one";
+        logger.info("===== word -" + word + "-");
+        logger.info("===== expected -" + expected + "-");
+        assertTrue(word.equals(expected));
+
+        word = NumberToWord.convertNumberToWord(111);
+        expected = "One hundred and eleven";
+        logger.info("===== word -" + word + "-");
+        logger.info("===== expected -" + expected + "-");
+        assertTrue(word.equals(expected));
+
+        word = NumberToWord.convertNumberToWord(110);
+        expected = "One hundred and ten";
+        logger.info("===== word -" + word + "-");
+        logger.info("===== expected -" + expected + "-");
+        assertTrue(word.equals(expected));
+
+        word = NumberToWord.convertNumberToWord(456);
+        expected = "Four hundred and fifty six";
+        logger.info("===== word -" + word + "-");
+        logger.info("===== expected -" + expected + "-");
+        assertTrue(word.equals(expected));
+
+        word = NumberToWord.convertNumberToWord(406);
+        expected = "Four hundred and six";
+        logger.info("===== word -" + word + "-");
+        logger.info("===== expected -" + expected + "-");
+        assertTrue(word.equals(expected));
+
+    }
+
+    @Test
     public void length4Test() throws Exception {
+
+        logger.info("%%%%%%%%%% length4Test %%%%%%%%%");
 
         String word = NumberToWord.convertNumberToWord(1000);
         String expected = "One thousand";

@@ -48,6 +48,21 @@ public class NumberToWord {
                 out += c.equals("") ? c : " and" + c;
             }
 
+        } else if (numberStr.length() == 3) {
+
+            String a = until20[Integer.parseInt(""+numberStr.charAt(0))];
+            out += Character.toUpperCase(a.trim().charAt(0)) + a.trim().substring(1) + " hundred";
+
+            if (Integer.parseInt(""+numberStr.charAt(1))>1) {
+                String b = wordsx10[Integer.parseInt(""+numberStr.charAt(1))];
+                out += b.equals("") ? b : " and" + b;
+                String b1 = until20[Integer.parseInt(""+numberStr.charAt(2))];
+                out += b1;
+            } else {
+                String c = until20[Integer.parseInt(""+numberStr.charAt(1)+numberStr.charAt(2))];
+                out += c.equals("") ? c : " and" + c;
+            }
+
         }
 
         return out;
