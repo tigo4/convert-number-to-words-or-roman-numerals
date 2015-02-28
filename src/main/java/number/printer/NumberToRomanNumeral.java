@@ -44,18 +44,17 @@ public class NumberToRomanNumeral {
         } else if (numberStr.length() == 3) {
 
             String a = hundred[Integer.parseInt(""+numberStr.charAt(0))];
-            out += Character.toUpperCase(a.trim().charAt(0)) + a.trim().substring(1);
+            out += a;
 
             out = get99Part(numberStr, out);
 
         } else if (numberStr.length() == 2) {
 
             out = get99Part(numberStr, out);
-            out = Character.toUpperCase(out.trim().charAt(0)) + out.trim().substring(1);
 
         } else if (numberStr.length() == 1) {
 
-            out = Character.toUpperCase(until20[number].trim().charAt(0)) + until20[number].trim().substring(1);
+            out = until20[number].charAt(0) + until20[number].substring(1);
 
         }
 
